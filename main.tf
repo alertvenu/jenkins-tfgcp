@@ -1,12 +1,7 @@
-
-resource "google_compute_network" "vpc"{
-  name= "vpc"
-  auto_create_subnetworks = "false"
-}
-
-resource "google_compute_subnetwork" "subnetwork"{
-  name ="subnetwork"
-  ip_cidr_range ="10.0.0.0/24"
-  network = google_compute_network.vpc.name
-  region ="us-central1"
+resource "google_storage_bucket" "my-bucket" {
+  name                     = "tt-githubdemo-bucket-001"
+  project                  = "decisive-circle-431817-n1"
+  location                 = "US"
+  force_destroy            = true
+  public_access_prevention = "enforced"
 }
