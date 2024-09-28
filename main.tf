@@ -1,9 +1,3 @@
-provider "google"{
-
-  project ="decisive-circle-431817-n1"
-  region = "us-central1"
-  zone ="us-central1-a"
-}
 
 resource "google_compute_network" "vpc"{
   name= "vpc"
